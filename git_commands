@@ -1,0 +1,63 @@
+git --version
+git config --list
+git config --global user.name "jorge"
+git config --global user.email "jorge@"
+	git config user.name "jorge"
+
+man git	
+git help
+	
+git init
+git add .
+git add vendors.txt
+git status
+git status --short
+git commit -m "my first commit"
+git commit -a -m "more messages"
+git remote add origin "https://..."
+git push -u origin master
+
+git diff --staged
+git diff master feature1
+
+git log
+git log - 12
+git log --oneline
+
+git rm vendors.txt (remove & stop tracking)
+git rm --cached vendors.txt  (stop tracking)
+git mv File1.txt Employees.txt (rename)
+
+git branch (list branches)
+git checkout -b new_branch (create and checkout branch)
+git branch new_branch (just create branch)
+git checkout master (switch to another branch)
+git branch -m old_branch new_branch (rename)
+git branch -d long_fix (delete)
+git branch -D long_fix (force delete)
+
+git stash (move to WIP dir)
+git stash list
+git stash show
+
+git merge new_branch (estando en master)
+example:
+	git checkout master (target branch)
+	git merge feature1 (source branch)
+
+git merge-base ticket1 master
+git rebase -i 38d15be
+	git rebase --abort
+
+git reset --soft (to staging area (index))
+git reset --mixed (to working directory) es el default
+git reset --hard (star over)
+
+--------------------------------------------
+do not use rebase on a public branch
+--------------------------------------------
+echo "# wired brain" >> README.md
+open http://chris.beams.io/post/git-commit
+start http://git-school.github.io/visualizing-git (in windows)
+git config --global core.editor "\"C:\Program Files\Notepad++\notepad++.exe\""
+git config --global core.editor "\"C:\Windows\System32\notepad.exe\""
